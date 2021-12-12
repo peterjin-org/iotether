@@ -1,0 +1,21 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 8P8C_LED_Shielded
+D RJ connector, 8P8C (8 positions 8 connected), two LEDs, RJ45, Shielded
+K 8P8C RJ female connector led
+F ~
+$ENDCMP
+#
+$CMP Conn_02x08_Counter_Clockwise
+D Generic connector, double row, 02x08, counter clockwise pin numbering scheme (similar to DIP packge numbering), script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
+$CMP RJ45_LED_Shielded
+D RJ connector, 8P8C (8 positions 8 connected), two LEDs, Shielded
+K 8P8C RJ female connector led
+F ~
+$ENDCMP
+#
+#End Doc Library
