@@ -13,68 +13,31 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 2250 2050 2    50   Input ~ 0
+Text GLabel 1000 1500 0    50   Input ~ 0
 U_MCP-
-Text GLabel 2250 1950 2    50   Input ~ 0
+Text GLabel 1000 1400 0    50   Input ~ 0
 U_MCP+
 Wire Wire Line
-	2250 1850 2900 1850
-Wire Wire Line
-	2900 1850 2900 1950
-$Comp
-L power:GND #PWR0121
-U 1 1 61BD7BBC
-P 2900 1950
-F 0 "#PWR0121" H 2900 1700 50  0001 C CNN
-F 1 "GND" H 2905 1777 50  0000 C CNN
-F 2 "" H 2900 1950 50  0001 C CNN
-F 3 "" H 2900 1950 50  0001 C CNN
-	1    2900 1950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2250 2150 2750 2150
-Wire Wire Line
-	2750 2150 2750 2350
+	2350 600  2350 800 
 $Comp
 L power:GND #PWR0122
 U 1 1 61BDB256
-P 2750 2650
-F 0 "#PWR0122" H 2750 2400 50  0001 C CNN
-F 1 "GND" H 2755 2477 50  0000 C CNN
-F 2 "" H 2750 2650 50  0001 C CNN
-F 3 "" H 2750 2650 50  0001 C CNN
-	1    2750 2650
+P 2350 1100
+F 0 "#PWR0122" H 2350 850 50  0001 C CNN
+F 1 "GND" H 2355 927 50  0000 C CNN
+F 2 "" H 2350 1100 50  0001 C CNN
+F 3 "" H 2350 1100 50  0001 C CNN
+	1    2350 1100
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR0123
-U 1 1 61BDE649
-P 2600 1300
-F 0 "#PWR0123" H 2600 1150 50  0001 C CNN
-F 1 "+5V" H 2615 1473 50  0000 C CNN
-F 2 "" H 2600 1300 50  0001 C CNN
-F 3 "" H 2600 1300 50  0001 C CNN
-	1    2600 1300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2600 1300 2600 1550
-Wire Wire Line
-	2600 1550 2250 1550
-Text Label 1750 1850 2    50   ~ 0
+Text Label 1800 1300 0    50   ~ 0
 232_TX
-Text Label 1750 1950 2    50   ~ 0
+Text Label 1800 1400 0    50   ~ 0
 232_RX
-Text Label 1750 2250 2    50   ~ 0
+Text Label 1800 1000 0    50   ~ 0
 SDA
-Text Label 2250 2250 0    50   ~ 0
+Text Label 1800 1100 0    50   ~ 0
 SCL
-Wire Wire Line
-	2250 1650 2900 1650
-Wire Wire Line
-	2900 1650 2900 1850
-Connection ~ 2900 1850
 Wire Wire Line
 	4500 1900 4950 1900
 Wire Wire Line
@@ -217,8 +180,6 @@ $EndComp
 Wire Wire Line
 	2000 4200 1400 4200
 Wire Wire Line
-	1400 4200 1400 5050
-Wire Wire Line
 	1400 5050 1500 5050
 Connection ~ 2000 4200
 Wire Wire Line
@@ -226,14 +187,9 @@ Wire Wire Line
 Wire Wire Line
 	1500 4950 1200 4950
 Wire Wire Line
-	1200 4950 1200 4850
-Wire Wire Line
-	1200 4850 1500 4850
-Wire Wire Line
 	1200 4950 1200 5650
 Wire Wire Line
 	1200 5650 2000 5650
-Connection ~ 1200 4950
 Connection ~ 2000 5650
 Wire Wire Line
 	3950 5600 3850 5600
@@ -579,23 +535,12 @@ $EndComp
 $Comp
 L Device:C C401
 U 1 1 61BDAC86
-P 2750 2500
-F 0 "C401" H 2865 2546 50  0000 L CNN
-F 1 "1uF" H 2865 2455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2788 2350 50  0001 C CNN
-F 3 "~" H 2750 2500 50  0001 C CNN
-	1    2750 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L custom:Conn_02x08_Counter_Clockwise U401
-U 1 1 61C0A814
-P 1950 1850
-F 0 "U401" H 2000 2367 50  0000 C CNN
-F 1 "MCP2221A" H 2000 2276 50  0000 C CNN
-F 2 "iotether:QFN-16-1EP_4x4mm_P0.65mm_EP2.1x2.1mm" H 1950 1850 50  0001 C CNN
-F 3 "~" H 1950 1850 50  0001 C CNN
-	1    1950 1850
+P 2350 950
+F 0 "C401" H 2465 996 50  0000 L CNN
+F 1 "1uF" H 2465 905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2388 800 50  0001 C CNN
+F 3 "~" H 2350 950 50  0001 C CNN
+	1    2350 950 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1265,4 +1210,147 @@ Wire Wire Line
 	5250 600  3850 600 
 Wire Wire Line
 	3850 600  3850 1050
+Wire Wire Line
+	1400 4200 1400 4850
+Wire Wire Line
+	1500 4850 1400 4850
+Connection ~ 1400 4850
+Wire Wire Line
+	1400 4850 1400 5050
+$Comp
+L Interface_USB:MCP2221AxSL U401
+U 1 1 61FEBC5D
+P 1400 1500
+F 0 "U401" H 1400 811 50  0000 C CNN
+F 1 "MCP2221AxSL" H 1400 720 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1400 2500 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20005565B.pdf" H 1400 2200 50  0001 C CNN
+	1    1400 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 600  1500 800 
+Wire Wire Line
+	1500 600  2350 600 
+Wire Wire Line
+	1400 800  900  800 
+Wire Wire Line
+	900  800  900  750 
+$Comp
+L power:+5V #PWR0419
+U 1 1 62035AC7
+P 900 750
+F 0 "#PWR0419" H 900 600 50  0001 C CNN
+F 1 "+5V" H 915 923 50  0000 C CNN
+F 2 "" H 900 750 50  0001 C CNN
+F 3 "" H 900 750 50  0001 C CNN
+	1    900  750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0420
+U 1 1 620381C6
+P 1400 2100
+F 0 "#PWR0420" H 1400 1850 50  0001 C CNN
+F 1 "GND" H 1405 1927 50  0000 C CNN
+F 2 "" H 1400 2100 50  0001 C CNN
+F 3 "" H 1400 2100 50  0001 C CNN
+	1    1400 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J409
+U 1 1 620C83D2
+P 2400 1700
+F 0 "J409" H 2480 1692 50  0000 L CNN
+F 1 "Conn_01x06" H 2480 1601 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 2400 1700 50  0001 C CNN
+F 3 "~" H 2400 1700 50  0001 C CNN
+	1    2400 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 1600 1800 1600
+Wire Wire Line
+	1800 1700 2200 1700
+Wire Wire Line
+	1800 1800 2200 1800
+Wire Wire Line
+	2200 1900 1800 1900
+$Comp
+L power:GND #PWR0422
+U 1 1 620F105E
+P 2200 2000
+F 0 "#PWR0422" H 2200 1750 50  0001 C CNN
+F 1 "GND" H 2205 1827 50  0000 C CNN
+F 2 "" H 2200 2000 50  0001 C CNN
+F 3 "" H 2200 2000 50  0001 C CNN
+	1    2200 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0421
+U 1 1 620F15FC
+P 2200 1500
+F 0 "#PWR0421" H 2200 1350 50  0001 C CNN
+F 1 "+5V" H 2215 1673 50  0000 C CNN
+F 2 "" H 2200 1500 50  0001 C CNN
+F 3 "" H 2200 1500 50  0001 C CNN
+	1    2200 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP401
+U 1 1 61F657E6
+P 5050 4650
+F 0 "JP401" H 5050 4914 50  0000 C CNN
+F 1 "Jumper" H 5050 4823 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 5050 4650 50  0001 C CNN
+F 3 "~" H 5050 4650 50  0001 C CNN
+	1    5050 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP402
+U 1 1 61F6638C
+P 5050 5000
+F 0 "JP402" H 5050 5264 50  0000 C CNN
+F 1 "Jumper" H 5050 5173 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 5050 5000 50  0001 C CNN
+F 3 "~" H 5050 5000 50  0001 C CNN
+	1    5050 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP403
+U 1 1 61F66B8C
+P 5050 5350
+F 0 "JP403" H 5050 5614 50  0000 C CNN
+F 1 "Jumper" H 5050 5523 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 5050 5350 50  0001 C CNN
+F 3 "~" H 5050 5350 50  0001 C CNN
+	1    5050 5350
+	1    0    0    -1  
+$EndComp
+Text Label 4750 5350 2    50   ~ 0
+SCL
+Text Label 4750 5000 2    50   ~ 0
+SDA
+$Comp
+L power:+5V #PWR0423
+U 1 1 61F6DED9
+P 4750 4650
+F 0 "#PWR0423" H 4750 4500 50  0001 C CNN
+F 1 "+5V" H 4765 4823 50  0000 C CNN
+F 2 "" H 4750 4650 50  0001 C CNN
+F 3 "" H 4750 4650 50  0001 C CNN
+	1    4750 4650
+	1    0    0    -1  
+$EndComp
+Text GLabel 5350 4650 2    50   Input ~ 0
+EXT_PWR
+Text GLabel 5350 5000 2    50   Input ~ 0
+EXT_SDA
+Text GLabel 5350 5350 2    50   Input ~ 0
+EXT_SCL
 $EndSCHEMATC

@@ -215,17 +215,14 @@ Connection ~ 2050 4350
 $Comp
 L power:+3.3V #PWR0107
 U 1 1 61AEE91A
-P 2950 3150
-F 0 "#PWR0107" H 2950 3000 50  0001 C CNN
-F 1 "+3.3V" H 2965 3323 50  0000 C CNN
-F 2 "" H 2950 3150 50  0001 C CNN
-F 3 "" H 2950 3150 50  0001 C CNN
-	1    2950 3150
+P 2600 3000
+F 0 "#PWR0107" H 2600 2850 50  0001 C CNN
+F 1 "+3.3V" H 2615 3173 50  0000 C CNN
+F 2 "" H 2600 3000 50  0001 C CNN
+F 3 "" H 2600 3000 50  0001 C CNN
+	1    2600 3000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3150 3150 2950 3150
-Connection ~ 2950 3150
 $Comp
 L power:GND #PWR0108
 U 1 1 61AF20B2
@@ -254,7 +251,7 @@ U 1 1 61AF4C39
 P 4700 3150
 F 0 "C106" H 4815 3196 50  0000 L CNN
 F 1 ".1uF" H 4815 3105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4738 3000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4738 3000 50  0001 C CNN
 F 3 "~" H 4700 3150 50  0001 C CNN
 	1    4700 3150
 	1    0    0    -1  
@@ -321,21 +318,10 @@ U 1 1 61AF15A7
 P 4100 3150
 F 0 "C104" H 4215 3196 50  0000 L CNN
 F 1 ".1uF" H 4215 3105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4138 3000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4138 3000 50  0001 C CNN
 F 3 "~" H 4100 3150 50  0001 C CNN
 	1    4100 3150
 	1    0    0    -1  
-$EndComp
-$Comp
-L Memory_EEPROM:93CxxA U102
-U 1 1 61B0470B
-P 5350 4150
-F 0 "U102" H 4906 4196 50  0000 R CNN
-F 1 "93CxxA" H 4906 4105 50  0000 R CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5350 4150 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" H 5350 4150 50  0001 C CNN
-	1    5350 4150
-	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	4950 4050 3950 4050
@@ -378,7 +364,7 @@ F 3 "" H 5350 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:USB_B_Micro J101
+L iotether-rescue:USB_B_Micro-Connector J101
 U 1 1 61B21B1B
 P 1650 1500
 F 0 "J101" H 1707 1967 50  0000 C CNN
@@ -689,9 +675,6 @@ Wire Wire Line
 	5750 3850 5750 4050
 Wire Wire Line
 	6250 4150 6250 4450
-Wire Wire Line
-	6250 4450 5350 4450
-Connection ~ 5350 4450
 $Comp
 L Device:R R102
 U 1 1 61B942EF
@@ -1206,4 +1189,88 @@ F 3 "~" H 9850 4350 50  0001 C CNN
 	1    9850 4350
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2950 3150 2800 3150
+Wire Wire Line
+	2600 3150 2600 3000
+$Comp
+L Device:Ferrite_Bead FB101
+U 1 1 61E023F0
+P 2950 2700
+F 0 "FB101" H 3087 2746 50  0000 L CNN
+F 1 "Ferrite_Bead" H 3087 2655 50  0000 L CNN
+F 2 "Inductor_SMD:L_1206_3216Metric_Pad1.22x1.90mm_HandSolder" V 2880 2700 50  0001 C CNN
+F 3 "~" H 2950 2700 50  0001 C CNN
+	1    2950 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead FB102
+U 1 1 61E02FD4
+P 3350 2500
+F 0 "FB102" H 3487 2546 50  0000 L CNN
+F 1 "Ferrite_Bead" H 3487 2455 50  0000 L CNN
+F 2 "Inductor_SMD:L_1206_3216Metric_Pad1.22x1.90mm_HandSolder" V 3280 2500 50  0001 C CNN
+F 3 "~" H 3350 2500 50  0001 C CNN
+	1    3350 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2550 3200 2550
+Wire Wire Line
+	3200 2550 3200 2350
+Wire Wire Line
+	3200 2350 3350 2350
+Wire Wire Line
+	3350 2650 3350 2850
+Wire Wire Line
+	3350 2850 3150 2850
+Wire Wire Line
+	3150 2850 3150 3150
+Connection ~ 3150 2850
+Wire Wire Line
+	3150 2850 2950 2850
+Wire Wire Line
+	2950 2550 2800 2550
+Wire Wire Line
+	2800 2550 2800 3150
+Connection ~ 2950 2550
+Connection ~ 2800 3150
+Wire Wire Line
+	2800 3150 2600 3150
+$Comp
+L power:+3.3VA #PWR0130
+U 1 1 61E5A4C1
+P 4150 2500
+F 0 "#PWR0130" H 4150 2350 50  0001 C CNN
+F 1 "+3.3VA" H 4165 2673 50  0000 C CNN
+F 2 "" H 4150 2500 50  0001 C CNN
+F 3 "" H 4150 2500 50  0001 C CNN
+	1    4150 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2500 4150 2650
+Wire Wire Line
+	4150 2650 3350 2650
+Connection ~ 3350 2650
+Connection ~ 5350 4450
+Wire Wire Line
+	6250 4450 5750 4450
+$Comp
+L Memory_EEPROM:93CxxC U102
+U 1 1 6225B8B9
+P 5350 4150
+F 0 "U102" H 5250 4500 50  0000 C CNN
+F 1 "93CxxC" H 5150 4400 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5350 4150 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" H 5350 4150 50  0001 C CNN
+	1    5350 4150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 4150 5750 4450
+Connection ~ 5750 4450
+Wire Wire Line
+	5750 4450 5350 4450
 $EndSCHEMATC

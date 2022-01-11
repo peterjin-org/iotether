@@ -75,7 +75,7 @@ F 3 "" H 4000 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4000 1000 4000 1250
+	4000 1000 4000 1050
 Wire Wire Line
 	4000 1600 4100 1600
 Connection ~ 4000 1600
@@ -95,14 +95,7 @@ Wire Wire Line
 Wire Wire Line
 	2600 2100 2350 2100
 Wire Wire Line
-	2350 2100 2350 900 
-Wire Wire Line
-	2350 900  3050 900 
-Wire Wire Line
-	3800 900  3800 1600
-Wire Wire Line
 	3600 1600 3700 1600
-Connection ~ 3800 1600
 Connection ~ 3700 1600
 Wire Wire Line
 	3700 1600 3800 1600
@@ -117,9 +110,6 @@ F 3 "~" H 3050 1050 50  0001 C CNN
 	1    3050 1050
 	1    0    0    -1  
 $EndComp
-Connection ~ 3050 900 
-Wire Wire Line
-	3050 900  3400 900 
 $Comp
 L Device:L L302
 U 1 1 61CBFC31
@@ -131,9 +121,6 @@ F 3 "~" H 3400 1050 50  0001 C CNN
 	1    3400 1050
 	1    0    0    -1  
 $EndComp
-Connection ~ 3400 900 
-Wire Wire Line
-	3400 900  3800 900 
 Wire Wire Line
 	3400 1200 3400 1400
 Wire Wire Line
@@ -619,15 +606,11 @@ Wire Wire Line
 Wire Wire Line
 	8800 4850 8800 3650
 Wire Wire Line
-	8800 3650 10300 3650
-Wire Wire Line
 	8900 3750 8900 4900
 Wire Wire Line
 	8900 4900 7600 4900
 Wire Wire Line
 	7600 4900 7600 4700
-Wire Wire Line
-	8900 3750 10300 3750
 Wire Wire Line
 	7550 4800 7550 4950
 Wire Wire Line
@@ -718,17 +701,6 @@ F 1 "GND" H 2155 3327 50  0000 C CNN
 F 2 "" H 2150 3500 50  0001 C CNN
 F 3 "" H 2150 3500 50  0001 C CNN
 	1    2150 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Memory_EEPROM:93CxxA U302
-U 1 1 61BE30C5
-P 1000 4450
-F 0 "U302" H 1000 4931 50  0000 C CNN
-F 1 "93CxxA" H 1000 4840 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 1000 4450 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" H 1000 4450 50  0001 C CNN
-	1    1000 4450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -924,4 +896,62 @@ Wire Wire Line
 Wire Wire Line
 	1400 3150 950  3150
 Connection ~ 950  3150
+Wire Wire Line
+	3700 1600 3700 700 
+Wire Wire Line
+	3700 700  2350 700 
+Wire Wire Line
+	2350 700  2350 2100
+Wire Wire Line
+	3050 900  3400 900 
+Wire Wire Line
+	3400 900  3850 900 
+Wire Wire Line
+	3850 900  3850 1050
+Wire Wire Line
+	3850 1050 4000 1050
+Connection ~ 3400 900 
+Connection ~ 4000 1050
+Wire Wire Line
+	4000 1050 4000 1250
+Wire Wire Line
+	8800 3650 9550 3650
+Wire Wire Line
+	8900 3750 9600 3750
+Wire Wire Line
+	9550 3650 9550 3400
+Wire Wire Line
+	9550 3400 9450 3400
+Connection ~ 9550 3650
+Wire Wire Line
+	9550 3650 10300 3650
+Wire Wire Line
+	9450 3300 9600 3300
+Wire Wire Line
+	9600 3300 9600 3750
+Connection ~ 9600 3750
+Wire Wire Line
+	9600 3750 10300 3750
+Text GLabel 9450 3400 0    50   Input ~ 0
+UARTSW_TX_C
+Text GLabel 9450 3300 0    50   Input ~ 0
+UARTSW_RX_C
+$Comp
+L Memory_EEPROM:93CxxC U302
+U 1 1 622876DE
+P 1000 4450
+F 0 "U302" H 1100 4800 50  0000 C CNN
+F 1 "93CxxC" H 1200 4700 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 1000 4450 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" H 1000 4450 50  0001 C CNN
+	1    1000 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	600  4450 550  4450
+Wire Wire Line
+	550  4450 550  4150
+Wire Wire Line
+	550  4150 1000 4150
+Connection ~ 1000 4150
 $EndSCHEMATC
